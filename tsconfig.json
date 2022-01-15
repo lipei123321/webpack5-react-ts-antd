@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "CommonJS", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+        "moduleResolution": "node", // 选择模块解析策略： 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
+        "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。
+        "esModuleInterop": true, //开启esModuleInterop后会默认开启allowSyntheticDefaultImports选项
+        "sourceMap": true, // 生成相应的 '.map' 文件
+        "removeComments": false, // 删除编译后的所有的注释
+        "rootDirs": ["./src"], // 根文件夹列表，其组合内容表示项目运行时的结构内容
+        "baseUrl": "./",
+        "paths": { 
+            // 模块名到基于 baseUrl 的路径映射的列表
+            "@/*": ["src/*"],
+        },
+        "jsx": "react-jsx",
+        "alwaysStrict": true, // 以严格模式检查每个模块，并在每个文件里加入 'use strict'
+        "importHelpers": true, // 从 tslib 导入辅助工具函数
+        "experimentalDecorators": true, // 启用装饰器
+        "resolveJsonModule": true,
+        "lib": ["es6", "dom", "es2017"], // 指定要包含在编译中的库文件
+        "skipLibCheck": true,
+        "typeRoots": ["node", "node_modules/@types", "./typings"] // 包含类型声明的文件列表
+    },
+    "include": [
+        "src/**/*",
+        "build/**/*", "mock", "mock",
+    ]
+}
